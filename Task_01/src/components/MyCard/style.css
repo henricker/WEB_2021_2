@@ -1,0 +1,50 @@
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  background: #ebe3e3;
+}
+
+.card, .listGroup, .cardbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-image {
+  margin-bottom: .4rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.text {
+  margin-bottom: 1rem;
+}
+
+.listGroup {
+  margin-bottom: 1rem;
+}
+
+.listGroup .item {
+  border-bottom: 2px solid #B5C401;
+  margin-bottom: .5rem;
+}
+
+.my-image {
+  border-radius: 10rem;
+}
+
+.icons {
+  text-align: center;
+}
+
+.icon:not(:first-child) {
+  margin-left: 1rem;
+}
