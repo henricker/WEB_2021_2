@@ -11,5 +11,5 @@
 
 - ## Apresentação de como ficou o card 
 
-![](resources/task01.png)
+![Apresentação do card](resources/task01.png)
 
