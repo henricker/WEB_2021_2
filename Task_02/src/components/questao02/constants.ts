@@ -1,0 +1,6 @@
+export const enemyPath = 'http://pm1.narvii.com/7032/bf28324d9a0b72cc990fbcfb72876e78ff0f4d36r1-452-442v2_00.jpg'
+export const heroPath = 'https://i2.wp.com/universonerd.net/portal/wp-content/uploads/2019/09/baki-1.png?fit=732%2C1155&ssl=1'
+export const heroFortaleza = 'https://i.pinimg.com/originals/af/0d/6e/af0d6e27654c7e4222b3965ebb0a28c8.jpg'
+export const enemyCeara = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_2O7G4tVbnVmOkFuZ78LDKa2ymK57QuDuZ8i7HG7ZWozWpEPobrpRE3cJzLCCnOc5U6w&usqp=CAU'
+export const heroNaruto = 'https://occ-0-1723-92.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABZtkFKv3vCiFAktNKBHox0qJnc95GnLtRDyDppk3cFzpooxSORT0EWTHwE5rCbHy-6cb8F4isoLDFWlcnlIbGS_rks0Tnt0bSqdU7iCzxJqGfC56.jpg?r=0d2'
+export const enemySasuke = 'https://www.comboinfinito.com.br/principal/wp-content/uploads/2018/05/sasuke-novel.jpg'

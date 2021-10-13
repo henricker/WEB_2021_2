@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.world {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+
+  border: 20px solid #ccc;
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(134, 134, 132);
+}
+
+.container > h1 {
+  color: #FFF;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
