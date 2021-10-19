@@ -1,0 +1,3 @@
+## Preview
+
+![](assets/readme.gif)

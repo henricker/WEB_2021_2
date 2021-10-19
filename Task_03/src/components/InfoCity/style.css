@@ -1,0 +1,19 @@
+
+.info-city-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.vote-counter {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.vote-counter button {
+  padding: .5rem 1rem;
+}

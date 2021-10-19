@@ -1,0 +1,24 @@
+.home-container {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.cities-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.result-votes {
+  border: 1px solid #ccc;
+  background-color: rgb(221, 241, 241);
+  padding: 3rem;
+
+  font-size: 1rem;
+  color:rgb(92, 85, 87);
+}
