@@ -1,0 +1,45 @@
+{
+  "students": [
+    {
+      "name": "Alysson Rabelo Alencar Shneiders",
+      "IRA": 10,
+      "program": "Ciência de Computação",
+      "id": 1
+    },
+    {
+      "name": "Henrique Vieira Cavalcante",
+      "IRA": 10,
+      "program": "Sistemas de Informação",
+      "id": 2
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Jefferson Carvalho",
+      "studyArea": "Engenharia de Software",
+      "id": 1
+    },
+    {
+      "name": "Francisco Aragão",
+      "studyArea": "Matemática",
+      "id": 2
+    },
+    {
+      "name": "Lana ",
+      "studyArea": "UI/UX",
+      "id": 3
+    }
+  ],
+  "courses": [
+    {
+      "capacity": 50,
+      "name": "Programação Orientada a Objetos",
+      "id": 1
+    },
+    {
+      "capacity": 50,
+      "name": "Fundamentos de Programação",
+      "id": 2
+    }
+  ]
+}
