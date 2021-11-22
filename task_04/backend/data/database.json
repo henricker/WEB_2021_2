@@ -1,0 +1,62 @@
+{
+  "students": [
+    {
+      "id": "691c7b7c-47eb-45d4-8990-9964ca3470c4",
+      "name": "Henrique Vieira Cavalcante",
+      "program": "Sistemas de informação",
+      "IRA": 10
+    },
+    {
+      "id": "2af31962-b61b-4e2c-88ef-0a4f74f709e3",
+      "name": "Alysson Rabelo",
+      "program": "Ciência da Computação",
+      "IRA": 10
+    },
+    {
+      "id": "80517610-ab6f-4c01-b02c-279088078182",
+      "name": "Clidenor",
+      "program": "Sistemas de Informação",
+      "IRA": 9
+    },
+    {
+      "id": "954c2a2e-7536-45d6-83dd-1681f5a36f14",
+      "name": "Hugo",
+      "program": "Sistemas de Informação",
+      "IRA": 10
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Jefferson Carvalho",
+      "studyArea": "Engenharia de Software",
+      "id": "487398f7-2bd3-4636-bf13-29da0d1e3cb4"
+    },
+    {
+      "name": "Francisco Aragão",
+      "studyArea": "Matemática",
+      "id": "9e01bdaa-12ce-4311-be04-52359af5ca09"
+    },
+    {
+      "name": "Lana Mesquita",
+      "studyArea": "UI/UX",
+      "id": "78b1ece0-a6a6-4d4b-bd86-daf619402164"
+    },
+    {
+      "id": "0edceda2-a86c-4a15-98bd-0c864e234ac9",
+      "name": "Atílio Gomes Luíz",
+      "studyArea": "Estrutura de dados e algoritmos"
+    }
+  ],
+  "courses": [
+    {
+      "id": "e4283a60-4661-4a7d-a5b4-c35731d03d3e",
+      "name": "Estrutura de dados avançada",
+      "capacity": 35
+    },
+    {
+      "id": "c2bb1a23-b416-4964-a862-e4095042e803",
+      "name": "Programação Orientada a Objetos",
+      "capacity": 50
+    }
+  ]
+}
