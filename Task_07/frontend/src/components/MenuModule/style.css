@@ -1,0 +1,14 @@
+.menuModule {
+  padding: 1rem;
+  margin: 0 auto;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menuModule a {
+  color: #666;
+  font-size: 1.2em;
+  text-decoration: none;
+}

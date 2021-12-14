@@ -1,0 +1,12 @@
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: #666;
+  background: linear-gradient(45deg, #F8F5F5, #FFF);
+  box-shadow: inset 0 0 1em #ccc, 0 0 1em rgb(143, 143, 143);
+  padding: .5rem;
+}
