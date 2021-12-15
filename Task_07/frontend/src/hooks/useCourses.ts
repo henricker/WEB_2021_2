@@ -1,37 +1,47 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { FirebaseContext } from '../context/firebase';
 import { Course } from '../models/course'
 
 export const useCourses = () => {
+  const firebaseContext = useContext(FirebaseContext);
   const [courses, setCourses] = useState<Course[]>([])
 
   useEffect(() => {
-    listCourse().then((courses) => setCourses(courses))
+    listCourse().then((coursesData) => setCourses(coursesData))
   }, [])
 
   function addCourse(course: Course) {
-    axios.post<{ course: Course }>('http://localhost:3333/courses', course).then(response => {
-    courses.push({ ...response.data.course })
-      setCourses(courses)
+    firebaseContext.getFirestore().collection('courses').add(course).then(() => {
+      courses.push(course)
+      setCourses(courses);
     })
   }
 
   function deleteCourse(id: string) {
-    axios.delete('http://localhost:3333/courses/' + id).then(_ => {
+    firebaseContext.getFirestore().collection('courses').doc(id).delete().then(() => {
       setCourses(courses.filter((course) => course._id !== id))
     })
   }
 
   function updateCourse(id: string, data: Course) {
-    axios.put('http://localhost:3333/courses/' + id, data).then(_ => {
-      const course = courses.find((course) => course._id === id)!
+    firebaseContext.getFirestore().collection('courses').doc(id).set(data).then(() => {
+      const course = courses.find((courseData) => courseData._id === id)!
       course.name = data.name
+      course.capacity = data.capacity
     })
   }
 
   async function listCourse() {
-    //const response = await axios.get<Course[]>('http://localhost:3333/courses')
-    return []
+    const coursesData: Course[] = (
+      await firebaseContext
+        .getFirestore()
+        .collection('courses')
+        .get()
+      )
+        .docs
+        .map((doc) => ({ _id: doc.id, ...doc.data() })) as any;
+  
+    return coursesData;
   }
 
   return {

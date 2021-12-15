@@ -12,7 +12,7 @@ export const useStudents = () => {
   }, [])
 
     function addStudent(student: Student) {
-    firebaseContext.getFirestore().collection('students').add(student).then((value) => {
+    firebaseContext.getFirestore().collection('students').add(student).then(() => {
       students.push(student)
       setStudents(students)
     })

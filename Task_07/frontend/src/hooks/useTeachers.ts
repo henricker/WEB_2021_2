@@ -1,31 +1,31 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { FirebaseContext } from '../context/firebase';
 import { Teacher } from '../models/teacher'
 
 export const useTeacher = () => {
+  const firebaseContext = useContext(FirebaseContext);
   const [teachers, setTeachers] = useState<Teacher[]>([])
 
   useEffect(() => {
-    ListTeachers().then((teachers) => setTeachers(teachers))
+    ListTeachers().then((teachersData) => setTeachers(teachersData))
   }, [])
 
   function addTeacher(teacher: Teacher) {
-    axios.post<{ teacher: Teacher}>('http://localhost:3333/teachers', teacher).then(response => {
-      teachers.push(response.data.teacher)
+    firebaseContext.getFirestore().collection('teachers').add(teacher).then(() => {
+      teachers.push(teacher)
       setTeachers(teachers)
     })
-    setTeachers(teachers)
   }
 
   function deleteTeacher(id: string) {
-    axios.delete('http://localhost:3333/teachers/' + id).then(_ => {
+    firebaseContext.getFirestore().collection('teachers').doc(id).delete().then(() => {
       setTeachers(teachers.filter((teacher) => teacher._id !== id))
     })
   }
 
   function updateTeacher(id: string, data: Teacher) {
-    axios.put('http://localhost:3333/teachers/' + id, data).then(_ => {
-      const teacher = teachers.find((teacher) => teacher._id === id)!
+    firebaseContext.getFirestore().collection('teachers').doc(id).set(data).then(() => {
+      const teacher = teachers.find((teacherData) => teacherData._id === id)!
       
       teacher.name = data.name
       teacher.studyArea = data.studyArea
@@ -33,8 +33,16 @@ export const useTeacher = () => {
   }
 
   async function ListTeachers() {
-    //const response = await axios.get<Teacher[]>('http://localhost:3333/teachers')
-    return []
+    const teachersData: Teacher[] = (
+      await firebaseContext
+      .getFirestore()
+      .collection('teachers')
+      .get()
+      )
+      .docs
+      .map((doc) => ({ _id: doc.id, ...doc.data() })) as any;
+
+    return teachersData;
   }
 
   return {
