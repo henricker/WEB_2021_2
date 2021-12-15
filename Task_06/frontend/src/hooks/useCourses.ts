@@ -26,6 +26,7 @@ export const useCourses = () => {
     axios.put('http://localhost:3333/courses/' + id, data).then(_ => {
       const course = courses.find((course) => course._id === id)!
       course.name = data.name
+      course.capacity = data.capacity
     })
   }
 
