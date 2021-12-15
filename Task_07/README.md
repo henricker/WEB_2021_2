@@ -1,4 +1,4 @@
-## Projeto CRUD com express
+## Projeto CRUD com firebase
 
 ### O que fiz?
 - Basicamente é a mesma aplicação que a TASK_06 só que ao invés de um backend com express é usado o firestore do firebase;
